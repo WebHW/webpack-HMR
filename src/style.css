@@ -1,4 +1,11 @@
+@font-face{
+  font-family: 'myFont';
+  src: url('./BlackoakStd.otf') format('otf');
+       font-style: italic;
+};
+
 .hello {
   color: red;
+  font-family: 'MyFont';
   background: url('./icon.png');
 }
