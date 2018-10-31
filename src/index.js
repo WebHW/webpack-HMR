@@ -1,12 +1,11 @@
-import { cube } from './another-module';
+import _ from 'lodash';
 
-async function getComponent(){
-  var element = document.createElement('div');
-  const _ = await import(/* webpackChunkName: "lodash" */ 'lodash');
-  element.innerHTML = _.join(['Hello', 'webpack'], '');
-  return element;
+function component(){
+	var element = document.createElement('div');
+	
+	// Lodash, now imported by this script
+	 element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+	 return element;
 }
 
-getComponent().then(component => {
-  document.body.appendChild(component);
-})
+document.body.appendChild(component());
